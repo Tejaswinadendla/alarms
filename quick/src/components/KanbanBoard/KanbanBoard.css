@@ -1,0 +1,162 @@
+/* Kanban Board Container */
+.kanban-board {
+    display: flex;
+    /* gap: 2px; Space between columns */
+    justify-content:space-between;
+    padding: 24px;
+    background-color: #ffffff; /* Light gray background */
+    min-height: 100vh;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    box-sizing: border-box;
+  }
+  
+  /* Kanban Column */
+  .kanban-column {
+    flex: 0 0 320px; /* Fixed width for columns */
+    background-color: #ffffff; /* White background for columns */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+     /* Subtle shadow for elevation */
+    display: flex;
+    /* flex-direction: column; */
+    /* overflow: auto; */
+  }
+  
+  /* Column Header */
+  .kanban-column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #696a6e; /* Light background for header */
+    border-bottom: 400px solid #e0e0e0; /* Subtle divider */
+  }
+  
+  .kanban-column-title {
+    font-size: 16px;
+    font-weight: 600;
+    align-content: baseline;
+    color: #3c4043; /* Neutral gray text */
+  }
+  
+  .kanban-column-count {
+    font-size: 12px;
+    color: #8a8a8a; /* Muted text for count */
+  }
+  
+  /* Add Button */
+  .kanban-column-add {
+    font-size: 18px;
+    color: #5f6368; /* Subtle icon color */
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .kanban-column-add:hover {
+    color: #3c4043; /* Slightly darker on hover */
+  }
+  
+  /* Cards Container */
+  .kanban-cards {
+    /* display: block; */
+    /* flex-direction: column; */
+    gap: 16px; /* Space between cards */
+    padding: 16px;
+    /* overflow-y: auto; */
+  }
+  
+  /* Card (Ticket) */
+  .ticket-card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    font-size: 14px;
+    color: #3c4043; /* Neutral gray text */
+    cursor: grab;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  
+  .ticket-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elevated shadow on hover */
+    transform: translateY(-6px); /* Slight lift */
+  }
+  
+  .ticket-card:active {
+    cursor: grabbing;
+  }
+  
+  /* Card Header */
+  .ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .ticket-id {
+    font-size: 12px;
+    font-weight: 600;
+    color: #5f6368; /* Muted text for ticket ID */
+  }
+  
+  .ticket-type {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8a8a8a; /* Muted text for ticket type */
+  }
+  
+  /* Card Footer */
+  .ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #8a8a8a; /* Muted text */
+  }
+  
+  .ticket-assignee {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ticket-assignee img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .ticket-priority {
+    background-color: #f3f4f6; /* Badge background */
+    border-radius: 16px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #3c4043; /* Neutral text */
+  }
+  
+  /* General Style for Dropdown and Controls */
+  .kanban-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .kanban-controls select {
+    padding: 8px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #3c4043;
+    cursor: pointer;
+  }
+  
